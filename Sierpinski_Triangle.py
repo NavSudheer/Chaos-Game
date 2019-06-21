@@ -7,7 +7,7 @@ def midpoint(point1, point2):
     return [(point1[0] + point2[0])/2, (point1[1] + point2[1])/2]
 
 # three points f the triangle chosen at random 
-v1 = [uniform(0,2),uniform(0,2)]
+'''v1 = [uniform(0,2),uniform(0,2)]
 v2 = [uniform(0,2),uniform(0,2)]
 v3 = [uniform(0,2),uniform(0,2)]
 
@@ -23,6 +23,19 @@ for _ in range(5000):
     if val == 2:
         curr_point = midpoint(curr_point, v3)
     # plot the new current point
+    pylab.plot(curr_point[0],curr_point[1],'m.',markersize=2)'''
+
+x = input("Enter the number of vertices")
+x  = int(x)
+vertices = {}
+for i in range(0,x):
+    vertices["v"+str(i)]=[uniform(0,2),uniform(0,2)]
+curr_point = vertices["v0"]
+for i in range(5000):
+    val = randint(0,x-1)
+    point = "v"+str(val)
+    curr_point = midpoint(curr_point, vertices[point])
     pylab.plot(curr_point[0],curr_point[1],'m.',markersize=2)
+    
 
 pylab.show()
