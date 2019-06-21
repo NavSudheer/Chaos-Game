@@ -6,10 +6,10 @@ from random import randint
 def midpoint(point1, point2):
     return [(point1[0] + point2[0])/2, (point1[1] + point2[1])/2]
 
-v1 = [uniform(0,4),uniform(0,4)]
-v2 = [uniform(0,4),uniform(0,4)]
-v3 = [uniform(0,4),uniform(0,4)]
-v4 = [uniform(0,4),uniform(0,4)]
+v1 = [1,1]
+v2 = [1,4]
+v3 = [4,4]
+v4 = [4,1]
 
 curr_point = v1
 lastval = 2000
